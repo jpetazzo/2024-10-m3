@@ -3,3 +3,6 @@ image:
   tag: latest
 service:
   port: 6379
+readinessProbe:
+  tcpSocket:
+    port: 6379

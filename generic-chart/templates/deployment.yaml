@@ -46,8 +46,18 @@ spec:
           {{ end }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
+          {{ if .Values.readinessProbe | toString | eq "auto" }}
+          {{ if .Values.service }}
+          {{ if .Values.service.port | toString | eq "80" }}
+          readinessProbe:
+            httpGet:
+              port: http
+          {{ end }}
+          {{ end }}
+          {{ else if .Values.readinessProbe }}
           readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
+          {{ end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}

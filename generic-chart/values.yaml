@@ -91,7 +91,7 @@ livenessProbe:
 #  httpGet:
 #    path: /
 #    port: http
-readinessProbe:
+readinessProbe: auto
 #  httpGet:
 #    path: /
 #    port: http

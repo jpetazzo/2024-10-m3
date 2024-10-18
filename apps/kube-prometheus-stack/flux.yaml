@@ -28,3 +28,4 @@ spec:
         name: prometheus-community
   interval: 1m0s
   targetNamespace: prom-system
+  releaseName: kube-prometheus-stack

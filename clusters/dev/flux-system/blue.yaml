@@ -4,6 +4,7 @@ metadata:
   labels:
     app: blue
   name: blue
+  namespace: flux-system
 spec:
   replicas: 1
   selector:

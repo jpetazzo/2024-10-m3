@@ -5,3 +5,4 @@ resources:
 - gotk-sync.yaml
 - ../../../apps/blue/flux.yaml
 - ../../../apps/kube-prometheus-stack/flux.yaml
+- ../../../apps/dockercoins-umbrella/flux.yaml
